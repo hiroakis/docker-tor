@@ -1,0 +1,15 @@
+SOCKSPort 9050
+SOCKSPolicy accept 127.0.0.1/32
+SOCKSPolicy reject *
+
+# RunAsDaemon 1
+ORPort 9001
+DirPort 9030
+ExitPolicy reject *:* # no exits allowed
+# ControlPort 9051
+# DisableDebuggerAttachment 0
+
+Log notice file /tor/var/log/tor/notices.log
+# Log debug file /tor/var/log/tor/debug.log
+
+DataDirectory /tor/var/lib/tor
